@@ -1,4 +1,5 @@
 from nltk.compat import raw_input
+from quicksort import quickSort
 
 __author__ = 'przemyslaw zamorski'
 'PRogram tworzący minimalne drzewo rozpiętości'
@@ -8,19 +9,20 @@ __author__ = 'przemyslaw zamorski'
 
 wierzchołki=raw_input("Wprowadz liczbę wierzchołków: ")
 ilość_krawędzi=raw_input("Wprowadz liczbę krawędzi: ")
+lista_krawedzi=[]
+
+#dodawanie krawedzi
+for x in range(0,int(ilość_krawędzi)):
+    krawedz= raw_input("Wprowadz 2 wierzchołki krawedzi i wage kazde po spacji nastepnie enter: ")
+    krawedz= krawedz.split()
+    krawedz= [(a) for a in krawedz]
+    lista_krawedzi.append(krawedz)
+
+#sortowanie
+lista_krawedzi=quickSort(lista_krawedzi)
+print(lista_krawedzi)
 
 
-def lista_krawędzi():
-    wagi_krawędzi = raw_input("Wprowadz wagi krwaędzi po spacji: ")
-    wagi_krawędzi = wagi_krawędzi.split() #splits the input string on spaces
-    wagi_krawędzi = [int(a) for a in wagi_krawędzi]
-    if int(len(wagi_krawędzi))==int(ilość_krawędzi):
-        return wagi_krawędzi
-    else:
-        print('wprowadzono niepoprawna liczbę wag krawędzi')
-        return False
-#wprowadzenie wag krawędzi
-wagi_krawędzi=lista_krawędzi()
-while (wagi_krawędzi==False):
-    wagi_krawędzi=lista_krawędzi()
+
+
 
