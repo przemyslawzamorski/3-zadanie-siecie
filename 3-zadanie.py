@@ -6,11 +6,14 @@ __author__ = 'przemyslaw zamorski'
 
 
 
+##wprowadzanie wierzchołków
+wierzchołki=raw_input("Wprowadz wierzchołki: ")
+wierzchołki=wierzchołki.split()
+lista_wierzchołków= [(a) for a in wierzchołki]
+print(lista_wierzchołków)
 
-wierzchołki=raw_input("Wprowadz liczbę wierzchołków: ")
 ilość_krawędzi=raw_input("Wprowadz liczbę krawędzi: ")
 lista_krawedzi=[]
-
 #dodawanie krawedzi
 for x in range(0,int(ilość_krawędzi)):
     krawedz= raw_input("Wprowadz 2 wierzchołki krawedzi i wage kazde po spacji nastepnie enter: ")
@@ -23,6 +26,17 @@ lista_krawedzi=quickSort(lista_krawedzi)
 print(lista_krawedzi)
 
 
-
+##########
+print('algorytm kruskala')
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 
 
