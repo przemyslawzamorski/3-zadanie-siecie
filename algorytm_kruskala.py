@@ -22,9 +22,9 @@ for x in range(0,int(ilość_krawędzi)):
 lista_krawedzi=quickSort(lista_krawedzi)
 print(lista_krawedzi)
 
+##przykladowe dane
 
-
-# lista_wierzcholkow = list( "ABCDEF" )
+# lista_wierzchołkow = list( "ABCDEF" )
 # lista_krawedzi = [ ("A", "B", 4), ("B", "C", 2),
 #           ("A", "F", 2),("C", "D", 8),
 #           ("F", "D", 6),
@@ -86,7 +86,11 @@ def kruskal( wierzchołki, krawędzie  ):
  
 
 #test
-print (kruskal( lista_wierzchołkow, lista_krawedzi ))
+mdr= (kruskal( lista_wierzchołkow, lista_krawedzi ))
+print(mdr)
 
+waga_drzewa=0
+for x in mdr:
+    waga_drzewa=waga_drzewa+int(x[2])
 
-
+print('waga drzewa wynosi', waga_drzewa)

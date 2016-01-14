@@ -80,4 +80,10 @@ def prim( nodes, edges ):
 #test
 
  
-print ( prim( lista_wierzchołkow, lista_krawedzi ))
+mdr=  prim( lista_wierzchołkow, lista_krawedzi )
+print(mdr)
+waga_drzewa=0
+for x in mdr:
+    waga_drzewa=waga_drzewa+int(x[2])
+
+print('waga drzewa wynosi', waga_drzewa)
